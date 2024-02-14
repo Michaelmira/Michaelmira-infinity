@@ -13,7 +13,7 @@ const Shirt = () => {
     const { nodes, materials } = useGLTF('/shirt_baked.glb');
 
     const logoTexture = useTexture(snap.logoDecal);
-    const fullTexture = useTexture(snap.fulllDecal);
+    const fullTexture = useTexture(snap.fullDecal);
 
     return (
         <group>
@@ -24,6 +24,25 @@ const Shirt = () => {
                 material-roughness={1}
                 dispose={null}
             > 
+                {snap.isFullTexture && (
+                    <Decal
+                        position={[0, 0, 0]}
+                        rotation={[0, 0, 0]}
+                        scale={1}
+                        map={fullTexture}
+                    />
+                )}
+                {snap.isLogoTexture && (
+                    <Decal
+                        position={[0, 0.04, 0.15]}
+                        rotation={[0, 0, 0]}
+                        scale={0.15}
+                        map={logoTexture}
+                        anisotropy={16}
+                        depthTest={false}
+                        depthWrite={true}
+                    />
+                )}
             </mesh>
         </group>
     )
