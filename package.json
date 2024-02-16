@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@react-three/drei": "^9.97.5",
-    "@react-three/fiber": "^8.15.16",
-    "openai": "^3.3.0"
-  }
-}

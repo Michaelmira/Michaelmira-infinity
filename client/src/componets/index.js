@@ -1,5 +1,3 @@
-// index.js
-
 import CustomButton from "./CustomButton";
 import AIPicker from "./AIPicker";
 import ColorPicker from "./ColorPicker";
