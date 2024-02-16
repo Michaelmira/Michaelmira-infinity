@@ -55,7 +55,7 @@ const Customizer = () => {
     try{
       setGeneratingImg(true);
 
-      const response = await fetch("http://localhost:8080/api/v1/dalle", {
+      const response = await fetch("https://fictional-happiness-7vvpvpp797qvhwqp-8080.app.github.dev", {
         method: "POST",
         headers: {
           "Content-Type" : "application/json"
@@ -67,7 +67,7 @@ const Customizer = () => {
 
       const data = await response.json();
 
-      handleDecals(type, "data:image/png;base64,${data.photo}")
+      handleDecals(type, `data:image/png;base64,${data.photo}`)
       // Call our backend to generate an AI Image
     } catch(error) {
       alert(error)
