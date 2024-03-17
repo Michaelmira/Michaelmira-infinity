@@ -1,3 +1,11 @@
+to run Client
+cd client
+npm run dev
+
+to run server
+cd server
+npm start
+
 TEST
 
 npm create vite@latest -- --template react client
